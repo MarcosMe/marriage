@@ -4,21 +4,26 @@
     <title>Casamento Cristina & Marcos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <section class="section">
     <div class="container has-text-centered">
       <h1 class="title">
-        Casamento Cristina & Marcos
+        Casamento
+      </h1>
+      <h1 class="title">
+        Cristina & Marcos
       </h1>
       <p class="subtitle">
         <strong>17</strong> de <strong>Outubro</strong> de <strong>2020</strong>
       </p>
       
-      <div id="app">
-        
+      <div id="countdown">
       </div>  
-      
+      <p class="subtitle">
+        Em desenvolvimento...
+      </p>
     </div>
   </section>
   </body>
@@ -42,13 +47,13 @@ let x = setInterval(function() {
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("app").innerHTML = "Faltam " + days + " dias " + hours + " horas "
-  + minutes + " minutos " + seconds + " segundos ";
+  document.getElementById("countdown").innerHTML = "Faltam " + days + " dias " + hours + " horas "
+  + minutes + " minutos " + seconds + " segundos para o grande dia!";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("app").innerHTML = "Já começou!";
+    document.getElementById("countdown").innerHTML = "Já começou!";
   }
 }, 1000);
 </script>
