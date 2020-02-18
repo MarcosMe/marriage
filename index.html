@@ -1,74 +1,469 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casamento Cristina & Marcos</title>
+
+    <script type="text/javascript">
+
+      if (screen.width <= 699) {
+        document.location = "mobile";
+      }
+
+      if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+        location.replace("mobile");
+      }
+
+      </script>
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-tooltip@3.0.2/dist/css/bulma-tooltip.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" >  
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/e0fc339167.js" crossorigin="anonymous"></script>
     <style>
       body {
         font-family: 'Merriweather', serif;
-        background-color: #ffffd3;
+        background-color: #eeeeee;
       }
     </style>
   </head>
   <body>
-    <section class="section">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        <i class="fas fa-ring"></i>
-        Casamento
-        <i class="fas fa-ring"></i>
-      </h1>
-      <h1 class="title">
-        Cristina & Marcos
-      </h1>
-      <br>
-      <h1 class="title">
-        <i class="fas fa-church"></i>
-        <strong>17</strong> de <strong>Outubro</strong> de <strong>2020</strong>
-        <i class="fas fa-glass-cheers"></i>
-      </h1>
-      <br>
-      <p class="subtitle" id="countdown">
-      </p>  
-      <br>
-      <h1 class="title">
-        Em desenvolvimento...
-        <i class="fas fa-toolbox"></i>
-      </h1>
-    </div>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light is-inverted" id="buttonHome" onclick="goTo('home')">
+                <i class="fas fa-heart"></i> &nbsp <strong>Cristina & Marcos</strong>
+              </a>
+              <a class="button is-light" id="buttonQuandoOnde" onclick="goTo('quandoOnde')">
+                <i class="fas fa-calendar-alt"></i> &nbsp Quando e Onde
+              </a>
+              <a class="button is-light" id="buttonComoChegar" onclick="goTo('comoChegar')">
+                <i class="fas fa-map-marker-alt"></i> &nbsp Como chegar 
+              </a>
+              <a class="button is-light" id="buttonAgradecimento" onclick="goTo('agradecimento')">
+                <i class="fas fa-grin-beam"></i> &nbsp Agradecimento
+              </a>
+              <a class="button is-light" id="buttonConfirmacoes" onclick="goTo('confirmacoes')">
+                <i class="fas fa-calendar-check"></i> &nbsp Confirmações
+              </a>
+              <a class="button is-light" id="buttonAlojamento" onclick="goTo('alojamento')">
+                <i class="fas fa-bed"></i> &nbsp Alojamento
+              </a>
+              <a class="button is-light" id="buttonContactos" onclick="goTo('contactos')">
+                <i class="fas fa-phone-square-alt"></i> &nbsp Contactos
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+    </nav>
+
+
+
+    <section class="hero is-fullheight" id="home">
+      <div class="hero-body" style="padding-bottom: 0px;">
+        <div class="container has-text-centered">
+          <h1 class="title" style="font-family: 'carlinet'; font-size: 5rem; padding-top: 36px;">
+            Cristina & Marcos
+          </h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div id="countdown"></div>
+          <br>
+          <h1 class="title is-size-1">
+            Vamos Casar!!
+          </h1>
+          <div class="columns is-centered">
+            <div class="column is-7">
+            <figure class="image" style="height: 405px; width: 780px;">
+              <img src="imgs/photo2.jpg" style="border-radius: 10px; height: 405px; width: 780px;">
+            </figure>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+
+  <section class="hero is-fullheight" style="background-color: #ffffff;" id="quandoOnde">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1">
+          <i class="fas fa-calendar-alt"></i> QUANDO E ONDE
+        </h1>
+        <br>
+        <br>
+        <div class="columns is-centered">
+          <div class="tile is-ancestor column is-half">
+            <div class="tile is-vertical">
+              <div class="tile">
+                <div class="tile is-parent is-4">
+                  <div class="tile is-child has-text-right" style="border-right: 1px solid black;">
+                    <p class="is-size-3" style="padding-right: 20px;">SÁBADO</p>
+                    <p class="is-size-1" style="padding-right: 20px;">17</p>
+                    <p class="is-size-3" style="padding-right: 20px;">OUTUBRO</p>
+                    <p class="is-size-3" style="padding-right: 20px;">2020</p>
+                  </div>
+                </div>
+                <div class="tile is-parent is-vertical" >
+                  <div class="tile is-child" style="border-bottom: 1px solid black;">
+                    <p class="is-size-1">15 H</p>
+                  </div>
+                  <div class="tile is-child" style="padding-top: 10px;">
+                    <p class="title is-size-4">CAPELA DE Nª Sª DA AJUDA</p>
+                    <p class="subtitle is-size-5">ESPINHO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tile is-parent" style="border-top: 1px solid black;">
+                <div class="tile is-child">
+                  <p class="title" style="padding-top: 10px;">QUINTA DO AVESSO</p>
+                  <p class="subtitle">LABRUGE – VILA DO CONDE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>  
   </section>
+
+  <section class="hero is-fullheight" id="comoChegar">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1">
+          <i class="fas fa-map-marker-alt"></i> COMO CHEGAR
+        </h1>
+        <br>
+        <br>
+        <div class="columns">
+          <div class="column is-half">
+            <p class="title"><i class="fas fa-church"></i> CAPELA DE Nª Sª DA AJUDA </p> 
+            <p class="is-size-4">Rua 8 nº 681</p>
+            <p class="is-size-4">4500-282 Espinho</p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d413.98646778265027!2d-8.64371526128011!3d41.00736493098493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2479c5e38fc179%3A0x122d0f452f6e6d9!2sCapela%20de%20N%C2%AA%20Sr%C2%AA%20da%20Ajuda!5e0!3m2!1sen!2spt!4v1580860806805!5m2!1sen!2spt" width="400" height="300" frameborder="0" style="border-radius: 10px;" allowfullscreen=""></iframe>
+          </div>
+            
+          <div class="column is-half">
+            <p class="title"> <i class="fas fa-glass-cheers"></i> QUINTA DO AVESSO</p>
+            <p class="is-size-4">Rua 25 de Abril 504</p>
+            <p class="is-size-4">4485-304 Labruge (Vila do Conde)</p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.573893798871!2d-8.723509370740745!3d41.28067119870465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2443650edff24b%3A0xbea80fa3296ec01a!2sQuinta%20do%20Avesso!5e0!3m2!1sen!2spt!4v1580861034770!5m2!1sen!2spt" width="400" height="300" frameborder="0" style="border-radius: 10px;" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="hero is-fullheight" style="background-color: #ffffff;" id="agradecimento">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1">
+          <i class="fas fa-grin-beam"></i> AGRADECIMENTO
+        </h1>
+        <br>
+        <br>
+          <p class="title">A vossa presença é o nosso maior presente!</p>
+          <p class="is-size-4">Se ainda assim quiserem contribuir na construção do nosso futuro, podem fazê-lo através do seguinte IBAN:</p>
+          <br>
+          <br>
+
+          <div class="field has-addons is-grouped is-grouped-centered">
+            <div class="control">
+              <input class="input" readonly type="text" id="inputToCopy" value="PT50003501000003319773089" size="26">
+            </div>
+            <div class="control">
+              <a class="button" onclick="copyToClipboard()" id="buttonToCopy" data-tooltip="Clica para copiar o IBAN">
+                <i class="fas fa-copy"></i> &nbsp Copiar
+              </a>
+            </div>
+          </div>
+
+          
+          <br>
+          <p class="title">OBRIGADA!</p>
+      </div>
+    </div>  
+  </section>
+
+  <section class="hero is-fullheight" id="confirmacoes">
+    <div class="hero-body">
+      <div class="container has-text-centered is-centered">
+
+        <div class="notification is-success is-hidden is-light" id="notificacao">
+          <button class="delete" onclick="document.querySelector('#notificacao').classList.add('is-hidden')";></button>
+          <p id="mensagem"></p>
+        </div>
+
+        <h1 class="title is-size-1">
+          <i class="fas fa-calendar-check"></i> CONFIRMAÇÕES
+        </h1>
+        <br>
+        <br>
+          <p class="title">Agradecemos a confirmação até dia 1 de Agosto</p>
+          <p class="is-size-4">Por favor coloca a informação relativa a todos os familiares presentes, incluíndo bebés e crianças</p>
+          <br>
+          
+          <form id="form">
+            <div class="columns">
+              <div class="column is-3">
+                <div class="field">
+                  <label class="label">Nome *</label>
+                  <div class="control" id="nome1">
+                    <input class="input formData" type="text" placeholder="Nome" name="nome1" required oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="nome2">
+                    <input class="input formData" type="text" placeholder="Nome" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="nome3">
+                    <input class="input formData" type="text" placeholder="Nome" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="nome4">
+                    <input class="input formData" type="text" placeholder="Nome" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="nome5">
+                    <input class="input formData" type="text" placeholder="Nome" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <label class="label">Apelido *</label>
+                  <div class="control" id="apelido1">
+                    <input class="input formData" type="text" placeholder="Apelido" name="apelido1" required oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="apelido2">
+                    <input class="input formData" type="text" placeholder="Apelido" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="apelido3">
+                    <input class="input formData" type="text" placeholder="Apelido" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="apelido4">
+                    <input class="input formData" type="text" placeholder="Apelido" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                  <div class="control is-hidden" id="apelido5">
+                    <input class="input formData" type="text" placeholder="Apelido" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                  </div>
+                </div>
+              </div>
+              <div class="column is-2">
+                <div class="field">
+                  <label class="label">Idade *</label>
+                  <div class="control" id="idade1">
+                    <div class="select">
+                      <select name="idade1" class="formData" required oninvalid="this.setCustomValidity('Por favor escolha uma opção')" onchange="this.setCustomValidity('')">
+                        <option value="">Seleciona idade</option>
+                        <option value="3">0-3 Anos</option>
+                        <option value="9">4-9 Anos</option>
+                        <option value="16">Adulto</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control is-hidden" id="idade2">
+                    <div class="select">
+                      <select class="formData" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                        <option value="">Seleciona idade</option>
+                        <option value="3">0-3 Anos</option>
+                        <option value="9">4-9 Anos</option>
+                        <option value="16">Adulto</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control is-hidden" id="idade3">
+                    <div class="select">
+                      <select class="formData" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                        <option value="">Seleciona idade</option>
+                        <option value="3">0-3 Anos</option>
+                        <option value="9">4-9 Anos</option>
+                        <option value="16">Adulto</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control is-hidden" id="idade4">
+                    <div class="select">
+                      <select class="formData" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                        <option value="">Seleciona idade</option>
+                        <option value="3">0-3 Anos</option>
+                        <option value="9">4-9 Anos</option>
+                        <option value="16">Adulto</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="control is-hidden" id="idade5">
+                    <div class="select">
+                      <select class="formData" oninvalid="this.setCustomValidity('Por favor preencher este campo')" onchange="this.setCustomValidity('')">
+                        <option value="">Seleciona idade</option>
+                        <option value="3">0-3 Anos</option>
+                        <option value="9">4-9 Anos</option>
+                        <option value="16">Adulto</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-4">
+                <div class="field">
+                  <label class="label">Outras informações (restrições alimentares, etc...)</label>
+                  <div class="control" id="outraInfo1">
+                    <input class="input formData" type="text" placeholder="Outras informações" name="outraInfo1" maxlength="50">
+                  </div>
+                  <div class="control is-hidden" id="outraInfo2">
+                    <input class="input formData" type="text" placeholder="Outras informações" maxlength="50">
+                  </div>
+                  <div class="control is-hidden" id="outraInfo3">
+                    <input class="input formData" type="text" placeholder="Outras informações" maxlength="50">
+                  </div>
+                  <div class="control is-hidden" id="outraInfo4">
+                    <input class="input formData" type="text" placeholder="Outras informações" maxlength="50">
+                  </div>
+                  <div class="control is-hidden" id="outraInfo5">
+                    <input class="input formData" type="text" placeholder="Outras informações" maxlength="50">
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <button type="button" class="button" onclick="addFormRow();" id="buttonAdd"><i class="fas fa-plus-circle"></i> &nbsp Adicionar</button>
+            <button type="button" class="button is-hidden" onclick="removeFormRow();" id="buttonRemove"><i class="fas fa-minus-circle"></i> &nbsp Remover</button>
+            <button type="submit" class="button" onclick="formSubmit(); return false;" id="buttonSend"> <i class="fas fa-upload"></i> &nbsp Enviar confirmação</button>
+
+          </form>
+
+
+      </div>
+    </div>  
+  </section>
+
+  <section class="hero is-fullheight" style="background-color: #ffffff;" id="alojamento">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1">
+          <i class="fas fa-bed"></i> ALOJAMENTO
+        </h1>
+        <br>
+        <br>
+        <div class="columns">
+          <div class="column is-5">
+            <p class="title is-size-3">Espinho </p>
+            <div class="columns">
+              <div class="column is-half has-text-left">
+                <p class="title is-size-5">Guest Houses - Hostels</p>
+
+                <a href="https://www.booking.com/hotel/pt/botica-guesthouse.html" target="_blank" data-tooltip="A 220 metros da capela">Botica Guesthouse</a><p>Rua 19 nº 269</p> <p>4500-256 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/alameda-guest-house-gf.html" target="_blank" data-tooltip="A 500 metros da capela">Alameda Guest House GF</a> <p>Avenida 8 nº 1110 r/c </p><p>4500-207 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/18-st-hostel.html" target="_blank" data-tooltip="A 400 metros da capela">18St.Hostel</a> <p>Rua 18 nº 505</p><p>4500-250 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/guest-house-a-amp-z.html" target="_blank" data-tooltip="A 850 metros da capela">Guest House A&z</a> <p>Rua 2 nº 1351</p><p>4500-261 Espinho</p><br>
+
+
+
+              </div>
+              <div class="column is-half has-text-left">
+                <p class="title is-size-5">Hoteis</p>
+
+                <a href="https://www.booking.com/hotel/pt/hotelm.html" target="_blank" data-tooltip="A 210 metros da capela">Hotel M***</a> <p>Avenida 8 nº 826</p> <p>4500-368 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/praiagolfe.html" target="_blank" data-tooltip="A 300 metros da capela">Hotel Praiagolfe****</a> <p>Rua 6</p> <p>4500-357 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/apartamento-solverde.html" target="_blank" data-tooltip="A 260 metros da capela">Hotel Apartamento Solverde****</a> <p>Rua 21 nº77</p> <p>4500-267 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/monte-lirio-espinho.html" target="_blank" data-tooltip="A 2 Kms da capela">Monte Lírio Hotel & WellnessCentre****</a> <p>Rua dos Limites nº550</p> <p>4500-069 Espinho</p><br>
+                <a href="https://www.booking.com/hotel/pt/hotelsolverde.html" target="_blank" data-tooltip="A 3 Kms da capela">Hotel Solverde Spa & WellnessCenter*****</a> <p>Avenida da Liberdade nº 212</p> <p>4410-154S Felix da Marinha</p><br>
+
+              </div>
+            </div>    
+          </div>
+          <div class="column is-7">
+            <p class="title is-size-3">Labruge / Vila do Conde </p>
+            <div class="columns">
+              <div class="column is-4 has-text-left">
+                <p class="title is-size-5">Guest Houses - Hostels</p>
+
+                <a href="https://www.booking.com/hotel/pt/casa-da-praia-guest-house.html" target="_blank" data-tooltip="A 1 Km da quinta">Casa da Praia Guest House</a>  <p>Avenida da Liberdade nº439 </p><p>4485-301 Labruge</p><br>
+                <a href="https://www.booking.com/hotel/pt/airporto-hostel.html" target="_blank" data-tooltip="A 11 Kms da quinta">AirPorto Hostel</a> <p>Rua da Estrada nº 244</p> <p>4470-600 Maia </p><br>
+                <a href="https://www.booking.com/hotel/pt/mindelo-beach-house.html" target="_blank" data-tooltip="A 4 Kms da quinta">Mindelo BeachHouse</a> <p>Rua de Atenas nº73</p> <p>4485-399 Mindelo </p><br>
+                <a href="https://www.booking.com/hotel/pt/autor-guesthouse.html" target="_blank" data-tooltip="A 10 Kms da quinta">Autor Guesthouse</a> <p>Rua do Lidador nº 225</p> <p>4480-791 Vila do Conde</p><br>
+                <a href="https://www.booking.com/hotel/pt/erva-doce-guest-house-vila-do-conde.html" target="_blank" data-tooltip="A 11 Kms da quinta">Erva Doce Guest House</a> <p>Rua do Cais das Lavandeiras nº 39/40</p> <p>4480-754 Vila do Conde</p><br>
+
+
+              </div>
+              <div class="column is-8 has-text-left">
+
+                  <p class="title is-size-5 has-text-centered">Hoteis</p>
+                  <div class="columns">
+                    <div class="column is-half">
+                      <a href="https://www.booking.com/hotel/pt/park-porto-aeroporto.html" target="_blank" data-tooltip="A 11 Kms da quinta">Park Hotel Porto Aeroporto***</a> <p>Avenida do Aeroporto nº241</p> <p>4470-558 Maia</p><br> 
+                      <a href="https://www.booking.com/hotel/pt/3k-porto-aeroporto.html" target="_blank" data-tooltip="A 11 Kms da quinta">Hotel 3K Porto Aeroporto***</a> <p>Rua Casimiro Albano Monteiro nº 143</p> <p>4470-428 Maia</p><br>
+                      <a href="https://www.booking.com/hotel/pt/oporto-airport-amp-business.html" target="_blank" data-tooltip="A 9 Kms da quinta">Oporto Airport & Business Hotel****</a> <p>Rua Casimiro Albano Monteiro nº35</p> <p>4470-428 Maia </p><br>
+                      <a href="https://www.booking.com/hotel/pt/opohotel-porto-aeroporto.html" target="_blank" data-tooltip="A 11 Kms da quinta">OPOHOTEL Porto Aeroporto****</a> <p>Rua do Hotel Pedras Rubras nº99</p> <p>4470-573 Maia</p><br>
+                      <a href="https://www.booking.com/hotel/pt/hoteltrypportoexpo.html" target="_blank" data-tooltip="A 11 Kms da quinta">Tryp Porto Expo Hotel****</a> <p>Rotunda da Exponor</p> <p>4450-801 Leça da Palmeira </p><br>
+                    </div>
+                    <div class="column is-half">
+                      <a href="https://www.booking.com/hotel/pt/casa-do-rio-charm-suites.html" target="_blank" data-tooltip="A 10 Kms da quinta">Casa do Rio Charm Suites</a> <p>Praça da Republica nº 9</p> <p>4480-715 Vila do Conde </p><br>
+                      <a href="https://www.booking.com/hotel/pt/a-rendilheira-boutique-vila-do-conde.html" target="_blank" data-tooltip="A 10 Kms da quinta">A Rendilheira Boutique Hotel</a> <p>Praça da Republica nº 1,2 e 3</p> <p>4480-715 Vila do Conde </p><br>
+                      <a href="https://www.booking.com/hotel/pt/hotelsantana.html" target="_blank" data-tooltip="A 9 Kms da quinta">Santana Hotel & Spa****</a> <p>Monte Santana</p> <p>4480-188 Vila do Conde </p><br>
+                      <a href="https://www.booking.com/hotel/pt/villa-c-spa.html" target="_blank" data-tooltip="A 10 Kms da quinta">Villa C Boutique Hotel – Design Hotels****</a> <p>Estrada Nacional 13 – Azurara</p> <p>4480-151 Vila do Conde</p><br>
+                      <a href="https://www.booking.com/hotel/pt/sea-porto-business-matosinhos.html" target="_blank" data-tooltip="A 13 Kms da quinta"> Sea Porto Hotel </a> <p>Avenida D. Afonso Henriques nº 354</p> <p>4450-009 Matosinhos-Porto</p><br>
+                    </div>
+
+
+
+              </div>
+            </div>    
+          </div>
+        </div>    
+      </div>
+    </div>  
+  </section>
+
+
+  <section class="hero is-fullheight" id="contactos">
+    <div class="hero-body">
+      <div class="container has-text-centered is-centered">
+        <h1 class="title is-size-1">
+          <i class="fas fa-phone-square-alt"></i> CONTACTOS
+        </h1>
+        <br>
+        <br>
+        <p class="subtitle">Cristina : <a href="tel:+351913339787">913339787</a></p>
+        <p class="subtitle">Marcos : <a href="tel:+351918087194">918087194</a></p>
+        <p class="subtitle">Email : <a mailto="cristinamarcos2020@gmail.com">cristinamarcos2020@gmail.com</a></p>
+
+      </div> 
+    </div>  
+  </section>
+
+  <button class="has-tooltip-left" onclick="backToTop()" id="backToTopButton" data-tooltip="Voltar ao início"><i class="fas fa-arrow-circle-up fa-2x"></i></button>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <i class="far fa-copyright"></i> Cristina & Marcos 2020
+      </p>
+
+      <p>
+        Created with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a href="marcosmendes.eu" target="_blank">Marcos Mendes</a>
+      </p>
+      <p>
+        Using <span class="has-tooltip-bottom" data-tooltip="Github pages"><a href="https://pages.github.com/" target="_blank" style="text-decoration: none; color:black;"><i class="fab fa-github"></i></a></span>
+        <span class="has-tooltip-bottom" data-tooltip="HTML"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" style="text-decoration: none; color:#E44D26;"><i class="fab fa-html5"></i></a></span>
+        <span class="has-tooltip-bottom" data-tooltip="CSS"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" style="text-decoration: none; color:#254BDE;"><i class="fab fa-css3-alt"></i></a></span>
+        <span class="has-tooltip-bottom" data-tooltip="Javascript"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" style="text-decoration: none; color:#F7E018;"><i class="fab fa-js"></i></a></span>
+        <span class="has-tooltip-bottom" data-tooltip="Bulma"><a href="https://bulma.io" target="_blank" style="text-decoration: none; color: #00D1B2;"><i class="fas fa-bold"></i></a></span>
+        and <span class="has-tooltip-bottom" data-tooltip="Font Awesome"><a href="https://fontawesome.com" target="_blank" style="text-decoration: none; color:#339AF0;"><i class="fab fa-font-awesome"></i></a></span>
+      </p>
+    </div>
+  </footer>
   </body>
-  <script>
-// Set the date we're counting down to
-const countDownDate = new Date("Oct 17, 2020 15:00:00").getTime();
-
-// Update the count down every 1 second
-let x = setInterval(function() {
-
-  // Get today's date and time
-  let now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  let distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = "Faltam " + days + " dias " + hours + " horas "
-  + minutes + " minutos " + seconds + " segundos para o casamento!";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Já começou!";
-  }
-}, 1000);
-</script>
+  <script src="script.js"></script>
 </html>
