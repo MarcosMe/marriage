@@ -1,0 +1,20 @@
+@font-face {
+    font-family: carlinet;
+    src: url("fonts/carlinet.otf") format("opentype");
+}
+
+#backToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: -10px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: gray;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 25px;
+  }
+
