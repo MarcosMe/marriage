@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-tooltip@3.0.2/dist/css/bulma-tooltip.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" >  
     <link rel="stylesheet" href="style.css">
 
@@ -101,7 +102,7 @@
             Vamos Casar!!
           </h1>
 
-          <figure class="image">
+          <figure class="image" data-aos="fade-right">
             <img src="imgs/photo2.jpg" style="border-radius: 7px;">
           </figure>
         </div>
@@ -117,7 +118,7 @@
         </h1>
         <br>
         <br>
-          <div class="columns is-mobile">
+          <div class="columns is-mobile" data-aos="flip-right">
               <div class="column is-4 has-text-right" style="border-right: 1px solid black;">
                 <p class="is-size-5" style="padding-right: 5px;">SÁBADO</p>
                 <p class="is-size-3" style="padding-right: 5px;">17</p>
@@ -135,7 +136,7 @@
                 </div>
               </div> 
           </div>
-          <div class="tile is-parent" style="border-top: 1px solid black;">
+          <div class="tile is-parent" style="border-top: 1px solid black;" data-aos="flip-right">
             <div class="tile is-child">
               <p class="title" style="padding-top: 10px;">QUINTA DO AVESSO</p>
               <p class="subtitle">LABRUGE – VILA DO CONDE</p>
@@ -489,5 +490,9 @@
     </div>
   </footer>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="scriptMobile.js"></script>
 </html>

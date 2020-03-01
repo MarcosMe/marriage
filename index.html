@@ -7,7 +7,7 @@
 
     <script type="text/javascript">
 
-      if (screen.width <= 699) {
+      if (screen.width <= 768) {
         document.location = "mobile.html";
       }
 
@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-tooltip@3.0.2/dist/css/bulma-tooltip.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" >  
     <link rel="stylesheet" href="style.css">
 
@@ -77,7 +78,7 @@
           <br>
           <br>
           <br>
-          <h1 class="title" style="font-family: 'carlinet'; color: #660020; font-size: 5rem; padding-top: 36px;">
+          <h1 class="title" style="font-family: 'carlinet'; color: #660020; font-size: 5rem; padding-top: 36px;" data-aos="fade-left"> 
             Cristina & Marcos
           </h1>
           <br>
@@ -90,7 +91,7 @@
             Vamos Casar!!
           </h1>
           <div class="columns is-centered">
-            <div class="column is-7">
+            <div class="column is-7" data-aos="fade-right">
             <figure class="image">
               <img src="imgs/photo2.jpg" style="border-radius: 10px; ">
             </figure>
@@ -109,7 +110,7 @@
         </h1>
         <br>
         <br>
-        <div class="columns is-centered">
+        <div class="columns is-centered" data-aos="flip-right">
           <div class="tile is-ancestor column is-half">
             <div class="tile is-vertical">
               <div class="tile">
@@ -474,5 +475,9 @@
     </div>
   </footer>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="script.js"></script>
 </html>
