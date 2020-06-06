@@ -27,7 +27,7 @@ let x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "<h1 class='title' data-tooltip='Já começou!!'><strong>17</strong> de <strong>Outubro</strong> de <strong>2020</strong></h1>";;
+    document.getElementById("countdown").innerHTML = "<h1 class='title' data-tooltip='Já começou!!'><strong>22</strong> de <strong>Outubro</strong> de <strong>2021</strong></h1>";;
   }
 }, 1000);
 
