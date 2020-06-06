@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countDownDate = new Date("Oct 17, 2020 15:00:00").getTime();
+const countDownDate = new Date("Oct 22, 2021 15:00:00").getTime();
 
 // Update the count down every 1 second
 let x = setInterval(function() {
@@ -19,7 +19,7 @@ let x = setInterval(function() {
   // Output the result in an element with id="demo"
 
   document.getElementById("countdown").innerHTML =
-  "<h1 class='title' style='cursor: default;' data-tooltip='Daqui a " + days + " dias " + hours + " horas " + minutes + " minutos " + seconds + " segundos!'> <i class='fas fa-calendar-day'></i> <strong>17</strong> de <strong>Outubro</strong> de <strong>2020</strong></h1>";
+  "<h1 class='title' style='cursor: default;' data-tooltip='Daqui a " + days + " dias " + hours + " horas " + minutes + " minutos " + seconds + " segundos!'> <i class='fas fa-calendar-day'></i> <strong>22</strong> de <strong>Outubro</strong> de <strong>2021</strong></h1>";
 
   //document.getElementById("countdown").innerHTML = "Faltam " + days + " dias " + hours + " horas "
   //+ minutes + " minutos " + seconds + " segundos para o casamento!";
