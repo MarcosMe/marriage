@@ -106,7 +106,7 @@ function goTo(location){
   }    
 }
 
-const array = ["home", "quandoOnde", "comoChegar", "agradecimento", "confirmacoes", "alojamento", "contactos"];
+const array = ["home", "quandoOnde", "comoChegar", "medidas", "agradecimento", "confirmacoes", "alojamento", "contactos"];
 const arrayElement = [];
 
 array.forEach(element => {

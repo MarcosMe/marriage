@@ -70,7 +70,7 @@ function goTo (location){
   window.scrollBy(0, -80);
 }
 
-const array = ["home", "quandoOnde", "comoChegar", "agradecimento", "confirmacoes", "alojamento", "contactos"];
+const array = ["home", "quandoOnde", "comoChegar", "medidas", "agradecimento", "confirmacoes", "alojamento", "contactos"];
 const arrayElement = [];
 
 array.forEach(element => {
